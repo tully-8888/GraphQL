@@ -4,13 +4,11 @@ import com.tully.graphqlcountriesapp.CountryQuery
 
 ///USE CASE USED FOR SINGLE RESPONSABILITY PRINCIPLE
 
-class GetCountriesUseCase (
+class GetCountryUseCase (
     private val countryClient:CountryClient
 ){
 
-    suspend fun execute():List<SimpleCountry>{
-        return  countryClient
-            .getCountries()
-            .sortedBy { it.name }
+    suspend fun execute(code:String):DetailedCountry?{
+        return countryClient.getCountry(code)
     }
 }
