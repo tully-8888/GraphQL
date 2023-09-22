@@ -60,7 +60,7 @@ fun CountriesScreen(
                     country = state.selectedCountry,
                     onDismiss = onDismissCountryDialog,
                     modifier = Modifier
-                        .clip(RoundedCornerShape(5.dp))
+                        .clip(RoundedCornerShape(20.dp))
                         .background(Color.Yellow)
                         .padding(16.dp)
                 )
